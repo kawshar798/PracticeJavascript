@@ -346,7 +346,7 @@ function runEvent(e){
   console.log(`EVENT TYPE:${e.type} `);
   heading.textContent = `MouseX: ${e.offsetX} MouseY:${e.offsetY}`;
   card.style.background = `rgb(${e.offsetX},${e.offsetY},40)`;
-}*/
+}
 
 
 //Key input event 
@@ -368,7 +368,11 @@ taskInput.value = '';
 //Key Foucus
 // taskInput.addEventListener('focus',runEvent);
 //Blur
-taskInput.addEventListener('blur',runEvent);
+// taskInput.addEventListener('blur',runEvent);
+
+//Change Evnet
+
+// addEventListener('change') eta use kora hoy sudu select er khetre;
 
 function runEvent(e){
   console.log(`Event Type: ${e.type}`);
@@ -376,6 +380,10 @@ function runEvent(e){
   heading.innerText = e.target.value;
 }
 
+//
+*/
+
+// 
 
 
   </script>
