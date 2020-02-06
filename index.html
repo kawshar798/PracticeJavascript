@@ -311,7 +311,7 @@ function onclick(e){
    val = e.offsetY;
    val = e.offsetX;
   console.log(val);
-}*/
+}
 
 
 //Mouse Event
@@ -346,7 +346,37 @@ function runEvent(e){
   console.log(`EVENT TYPE:${e.type} `);
   heading.textContent = `MouseX: ${e.offsetX} MouseY:${e.offsetY}`;
   card.style.background = `rgb(${e.offsetX},${e.offsetY},40)`;
+}*/
+
+
+//Key input event 
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+const heading = document.querySelector('h5');
+
+//clear Input
+taskInput.value = '';
+
+//Keydown
+// taskInput.addEventListener('keydown',runEvent);
+//Keyup
+// taskInput.addEventListener('keyup',runEvent);
+//Key press
+// taskInput.addEventListener('keypress',runEvent);
+
+//Key Foucus
+// taskInput.addEventListener('focus',runEvent);
+//Blur
+taskInput.addEventListener('blur',runEvent);
+
+function runEvent(e){
+  console.log(`Event Type: ${e.type}`);
+  console.log(e.target.value);
+  heading.innerText = e.target.value;
 }
+
+
 
   </script>
 </body>
