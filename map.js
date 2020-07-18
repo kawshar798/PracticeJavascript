@@ -67,11 +67,29 @@ const originalArr = [1,2,3,4,5];
 // It doesn’t change the original array.
 
  const arr = ['Hello','there','how','are','Is','read'];
- function capitalized(){
+ function capitalized(arr){
   return  arr.map(function(item){
-   return   item.charAt(0).toUpperCase() + item.slice(0);
+   return   item[0].toUpperCase() + item.slice(1);
 
  });
  }
 
- console.log(capitalized());
+ console.log(capitalized(arr));
+
+
+ //  Write a function that will take in an array of integers. 
+//  It should return an array telling whether each item in the original array is even or odd.
+
+const numbers = [1,2,40,59,6,5];
+
+function oddEven(numbers){
+return   numbers.map(function(item){
+    if(item % 2 === 0){
+      return 'even';
+    }
+    return "odd";
+  })
+
+}
+
+console.log(oddEven(numbers))
