@@ -35,20 +35,43 @@ const originalArr = [1,2,3,4,5];
 // }
 // console.log(newArr);
 
-function timesThree(item,index,arr){
-  console.log(item,index,arr);
-}
 
-function multiply(arr,transform){
+// Custom map function 
+// function timesThree(item,index,arr){
+//   console.log(item,index,arr);
+// }
 
-   const newArr = [];
-   for(let i = 0; i < arr.length; i++){
-   //   newArr[i] =  arr[i] * 3;
-   //   newArr[i] =   transform(arr[i],i,arr);
+// function multiply(arr,transform){
+
+//    const newArr = [];
+//    for(let i = 0; i < arr.length; i++){
+//    //   newArr[i] =  arr[i] * 3;
+//    //   newArr[i] =   transform(arr[i],i,arr);
     
-     newArr.push(transform(arr[i],i,arr));
-   }
-   return newArr;
-}
+//      newArr.push(transform(arr[i],i,arr));
+//    }
+//    return newArr;
+// }
 
- const result = multiply(originalArr,timesThree);
+//  const result = multiply(originalArr,timesThree);
+
+
+//Built in map fucntion
+
+/***
+ * Write a function that will take an array of words and return an array of those same words with the first letter of each word capitalized.
+ * 
+ */
+
+
+ const arr = ['Hello','there','how','are','Is','read'];
+ 
+ const newArr = [];
+//  function capitalized(){
+ arr.map(function(item){
+    const newItem =  item.charAt(0).toUpperCase() + item.slice(0);
+    newArr.push(newItem);
+ });
+
+//  }
+ console.log(newArr);
